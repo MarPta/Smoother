@@ -39,7 +39,7 @@
             173198 -57233.3  173592 -57170.9  173990 -57150  229870 -57150
             230268 -57170.9)
     )
-    (via "Via[0-1]_800:400_um")
+    (via "Via[0-1]_800:400_um" "Via[0-1]_1600:800_um")
     (rule
       (width 250)
       (clearance 200.1)
@@ -48,6 +48,9 @@
     )
   )
   (placement
+    (component "Package_TO_SOT_SMD:TO-252-3_TabPin2"
+      (place U14 205740 -88900 back 180 (PN "AP7363-33"))
+    )
     (component Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
       (place J1 214630 -87630 front 0 (PN Conn_01x02_Male))
     )
@@ -59,9 +62,6 @@
     )
     (component SmootherBoard:signature
       (place G*** 203200 -111760 back 90 (PN LOGO))
-    )
-    (component "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-      (place U14 203880 -90170 back 180 (PN "AP7363-33"))
     )
     (component Inductor_SMD:L_1206_3216Metric
       (place L1 195450 -81250 back 0 (PN 4.7uH))
@@ -139,6 +139,39 @@
     )
   )
   (library
+    (image "Package_TO_SOT_SMD:TO-252-3_TabPin2"
+      (outline (path signal 50  5550 3500  -5550 3500))
+      (outline (path signal 50  5550 -3500  5550 3500))
+      (outline (path signal 50  -5550 -3500  5550 -3500))
+      (outline (path signal 50  -5550 3500  -5550 -3500))
+      (outline (path signal 120  -2470 -3180  -3570 -3180))
+      (outline (path signal 120  -2470 -3450  -2470 -3180))
+      (outline (path signal 120  -970 -3450  -2470 -3450))
+      (outline (path signal 120  -2470 3180  -5300 3180))
+      (outline (path signal 120  -2470 3450  -2470 3180))
+      (outline (path signal 120  -970 3450  -2470 3450))
+      (outline (path signal 100  -4970 -2655  -2270 -2655))
+      (outline (path signal 100  -4970 -1905  -4970 -2655))
+      (outline (path signal 100  -2270 -1905  -4970 -1905))
+      (outline (path signal 100  -4970 -375  -2270 -375))
+      (outline (path signal 100  -4970 375  -4970 -375))
+      (outline (path signal 100  -2270 375  -4970 375))
+      (outline (path signal 100  -4970 1905  -2270 1905))
+      (outline (path signal 100  -4970 2655  -4970 1905))
+      (outline (path signal 100  -1865 2655  -4970 2655))
+      (outline (path signal 100  -1270 3250  3950 3250))
+      (outline (path signal 100  -2270 2250  -1270 3250))
+      (outline (path signal 100  -2270 -3250  -2270 2250))
+      (outline (path signal 100  3950 -3250  -2270 -3250))
+      (outline (path signal 100  3950 3250  3950 -3250))
+      (outline (path signal 100  4950 -2700  3950 -2700))
+      (outline (path signal 100  4950 2700  4950 -2700))
+      (outline (path signal 100  3950 2700  4950 2700))
+      (pin Rect[T]Pad_6400x5800_um 2 2100 0)
+      (pin Rect[T]Pad_2200x1200_um 3 -4200 -2280)
+      (pin Rect[T]Pad_2200x1200_um 2@1 -4200 0)
+      (pin Rect[T]Pad_2200x1200_um 1 -4200 2280)
+    )
     (image Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
       (outline (path signal 50  1800 1800  -1800 1800))
       (outline (path signal 50  1800 -4350  1800 1800))
@@ -185,25 +218,6 @@
       (keepout "" (circle B.Cu 3200 7620 1905))
     )
     (image SmootherBoard:signature
-    )
-    (image "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-      (outline (path signal 100  1850 3350  1850 -3350))
-      (outline (path signal 100  -1850 -3350  1850 -3350))
-      (outline (path signal 120  -4100 3410  1910 3410))
-      (outline (path signal 100  -850 3350  1850 3350))
-      (outline (path signal 120  -1850 -3410  1910 -3410))
-      (outline (path signal 100  -1850 2350  -1850 -3350))
-      (outline (path signal 100  -1850 2350  -850 3350))
-      (outline (path signal 50  -4400 3600  -4400 -3600))
-      (outline (path signal 50  -4400 -3600  4400 -3600))
-      (outline (path signal 50  4400 -3600  4400 3600))
-      (outline (path signal 50  4400 3600  -4400 3600))
-      (outline (path signal 120  1910 3410  1910 2150))
-      (outline (path signal 120  1910 -3410  1910 -2150))
-      (pin Rect[T]Pad_2000x1500_um 1 -3150 2300)
-      (pin Rect[T]Pad_2000x1500_um 3 -3150 -2300)
-      (pin Rect[T]Pad_2000x1500_um 2 -3150 0)
-      (pin Rect[T]Pad_2000x3800_um 2@1 3150 0)
     )
     (image Inductor_SMD:L_1206_3216Metric
       (outline (path signal 50  2280 -1120  -2280 -1120))
@@ -729,17 +743,17 @@
             593.908 797.144))
       (attach off)
     )
-    (padstack Rect[T]Pad_2000x3800_um
-      (shape (rect F.Cu -1000 -1900 1000 1900))
-      (attach off)
-    )
-    (padstack Rect[T]Pad_2000x1500_um
-      (shape (rect F.Cu -1000 -750 1000 750))
+    (padstack Rect[T]Pad_2200x1200_um
+      (shape (rect F.Cu -1100 -600 1100 600))
       (attach off)
     )
     (padstack Rect[A]Pad_3500x3500_um
       (shape (rect F.Cu -1750 -1750 1750 1750))
       (shape (rect B.Cu -1750 -1750 1750 1750))
+      (attach off)
+    )
+    (padstack Rect[T]Pad_6400x5800_um
+      (shape (rect F.Cu -3200 -2900 3200 2900))
       (attach off)
     )
     (padstack Rect[A]Pad_1560x1560_um
@@ -760,6 +774,11 @@
     (padstack "Via[0-1]_800:400_um"
       (shape (circle F.Cu 800))
       (shape (circle B.Cu 800))
+      (attach off)
+    )
+    (padstack "Via[0-1]_1600:800_um"
+      (shape (circle F.Cu 1600))
+      (shape (circle B.Cu 1600))
       (attach off)
     )
   )
@@ -798,7 +817,7 @@
       (pins RV1-1 R1-2)
     )
     (net BatV
-      (pins J1-1 U14-1 C2-1 C1-1 U8-4 U7-4 R1-1)
+      (pins U14-1 J1-1 C2-1 C1-1 U8-4 U7-4 R1-1)
     )
     (net GND
       (pins U14-2 U14-2@1 C6-2 C5-2 C4-2 C3-2 C2-2 U1-26 U1-20 U1-14 U13-2 U13-4 U12-2
@@ -981,27 +1000,33 @@
     (net "Net-(J1-Pad2)"
       (pins J1-2 U4-6)
     )
-    (class kicad_default "" +3V3 "5V-charge" "BAT-Sense" BatV GND LineSensor0
-      LineSensor1 LineSensor2 LineSensor3 MPU_inter Motor0A Motor0B Motor1A
-      Motor1B Motor2A Motor2B Motor3A Motor3B MotorFault MotorSleep "Net-(BT1-Pad1)"
-      "Net-(BT1-Pad2)" "Net-(C1-Pad2)" "Net-(C3-Pad1)" "Net-(J1-Pad2)" "Net-(Motor0-Pad1)"
-      "Net-(Motor0-Pad2)" "Net-(Motor1-Pad1)" "Net-(Motor1-Pad2)" "Net-(Motor2-Pad1)"
-      "Net-(Motor2-Pad2)" "Net-(Motor3-Pad1)" "Net-(Motor3-Pad2)" "Net-(R1-Pad2)"
-      "Net-(R10-Pad2)" "Net-(R11-Pad2)" "Net-(R14-Pad2)" "Net-(R15-Pad2)"
-      "Net-(R18-Pad2)" "Net-(R19-Pad2)" "Net-(R2-Pad1)" "Net-(R20-Pad2)" "Net-(R21-Pad2)"
-      "Net-(R22-Pad2)" "Net-(R25-Pad2)" "Net-(R26-Pad2)" "Net-(R3-Pad2)" "Net-(R4-Pad1)"
-      "Net-(R6-Pad2)" "Net-(R7-Pad2)" "Net-(R9-Pad2)" "Net-(U1-Pad1)" "Net-(U1-Pad15)"
-      "Net-(U1-Pad16)" "Net-(U1-Pad17)" "Net-(U1-Pad18)" "Net-(U1-Pad19)"
+    (class kicad_default "" +3V3 "BAT-Sense" LineSensor0 LineSensor1 LineSensor2
+      LineSensor3 MPU_inter Motor0A Motor0B Motor1A Motor1B Motor2A Motor2B
+      Motor3A Motor3B MotorFault MotorSleep "Net-(BT1-Pad1)" "Net-(BT1-Pad2)"
+      "Net-(C3-Pad1)" "Net-(J1-Pad2)" "Net-(R1-Pad2)" "Net-(R10-Pad2)" "Net-(R11-Pad2)"
+      "Net-(R14-Pad2)" "Net-(R15-Pad2)" "Net-(R18-Pad2)" "Net-(R19-Pad2)"
+      "Net-(R2-Pad1)" "Net-(R20-Pad2)" "Net-(R21-Pad2)" "Net-(R22-Pad2)" "Net-(R25-Pad2)"
+      "Net-(R26-Pad2)" "Net-(R3-Pad2)" "Net-(R4-Pad1)" "Net-(R6-Pad2)" "Net-(R7-Pad2)"
+      "Net-(R9-Pad2)" "Net-(U1-Pad16)" "Net-(U1-Pad17)" "Net-(U1-Pad18)" "Net-(U1-Pad19)"
       "Net-(U1-Pad2)" "Net-(U1-Pad23)" "Net-(U1-Pad24)" "Net-(U1-Pad36)" "Net-(U1-Pad37)"
-      "Net-(U1-Pad38)" "Net-(U2-Pad5)" "Net-(U2-Pad6)" "Net-(U2-Pad7)" "Net-(U2-Pad8)"
-      "Net-(U3-Pad16)" "Net-(U3-Pad17)" "Net-(U3-Pad18)" "Net-(U3-Pad19)"
-      "Net-(U3-Pad20)" "Net-(U3-Pad21)" "Net-(U3-Pad22)" "Net-(U4-Pad1)" SCL
-      SDA SW0 SW1 WheelEnc0 WheelEnc1 WheelEnc2 WheelEnc3
+      "Net-(U1-Pad38)" "Net-(U2-Pad5)" "Net-(U2-Pad6)" "Net-(U2-Pad7)" "Net-(U4-Pad1)"
+      SCL SDA SW0 SW1 WheelEnc0 WheelEnc1 WheelEnc2 WheelEnc3
       (circuit
         (use_via Via[0-1]_800:400_um)
       )
       (rule
         (width 250)
+        (clearance 200.1)
+      )
+    )
+    (class Power BatV GND "Net-(Motor0-Pad1)" "Net-(Motor0-Pad2)" "Net-(Motor1-Pad1)"
+      "Net-(Motor1-Pad2)" "Net-(Motor2-Pad1)" "Net-(Motor2-Pad2)" "Net-(Motor3-Pad1)"
+      "Net-(Motor3-Pad2)"
+      (circuit
+        (use_via Via[0-1]_1600:800_um)
+      )
+      (rule
+        (width 1000)
         (clearance 200.1)
       )
     )

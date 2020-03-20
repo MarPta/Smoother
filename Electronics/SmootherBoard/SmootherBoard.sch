@@ -1617,7 +1617,7 @@ U 1 1 5ECD3BE7
 P 6100 4200
 F 0 "U14" H 6100 4442 50  0000 C CNN
 F 1 "AP7363-33" H 6100 4351 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 6100 4425 50  0001 C CIN
+F 2 "Package_TO_SOT_SMD:TO-252-3_TabPin2" H 6100 4425 50  0001 C CIN
 F 3 "https://www.diodes.com/assets/Datasheets/AP7361C.pdf" H 6100 4150 50  0001 C CNN
 	1    6100 4200
 	1    0    0    -1  
@@ -1743,10 +1743,10 @@ Wire Wire Line
 	8050 4200 8050 4150
 Connection ~ 7950 4200
 $Comp
-L Connector:Conn_01x02_Male J?
+L Connector:Conn_01x02_Male J1
 U 1 1 5EE83C64
 P 6550 5950
-F 0 "J?" V 6612 5994 50  0000 L CNN
+F 0 "J1" V 6612 5994 50  0000 L CNN
 F 1 "Conn_01x02_Male" V 6703 5994 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6550 5950 50  0001 C CNN
 F 3 "~" H 6550 5950 50  0001 C CNN
